@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Form - Page 4</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Contact Jared</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="page2.html">Responsive Layout</a></li>
+      <li><a href="page3.html">Tables</a></li>
+      <li><a href="#">Form</a></li> <!-- Dead link for current page -->
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Get in Touch</h2>
+      <p>Use the form below to contact Jared. Please fill out all required fields.</p>
+      <form action="process.php" method="POST" class="responsive-form">
+        <div class="form-group">
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" required />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+
+        <div class="form-group">
+          <label for="birthdate">Date of Birth:</label>
+          <input type="date" id="birthdate" name="birthdate" required />
+        </div>
+
+        <div class="form-group">
+          <label for="favorite-color">Favorite Color:</label>
+          <input list="colors" id="favorite-color" name="favorite-color" />
+          <datalist id="colors">
+            <option value="Red" />
+            <option value="Blue" />
+            <option value="Green" />
+            <option value="Yellow" />
+            <option value="Purple" />
+          </datalist>
+        </div>
+
+        <div class="form-group">
+          <label for="role">Select Role:</label>
+          <select id="role" name="role" required>
+            <option value="">-- Please choose --</option>
+            <option value="student">Student</option>
+            <option value="developer">Developer</option>
+            <option value="designer">Designer</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <fieldset class="form-group">
+          <legend>Preferred Contact Method:</legend>
+          <label><input type="radio" name="contact" value="email" required /> Email</label>
+          <label><input type="radio" name="contact" value="phone" /> Phone</label>
+          <label><input type="radio" name="contact" value="mail" /> Mail</label>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <legend>Subscribe to:</legend>
+          <label><input type="checkbox" name="newsletter" value="yes" /> Newsletter</label>
+          <label><input type="checkbox" name="offers" value="yes" /> Special Offers</label>
+          <label><input type="checkbox" name="updates" value="yes" /> Product Updates</label>
+        </fieldset>
+
+        <div class="form-group full-width">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jared</p>
+  </footer>
+</body>
+</html>
